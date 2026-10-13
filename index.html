@@ -189,6 +189,11 @@ section { background: #fff; border: 1px solid var(--line-soft); border-radius: 8
 .tl-item .where { font-size: 13.5px; color: var(--t2); margin-bottom: 10px; }
 .tl-item ul { margin: 8px 0 0 18px; }
 .tl-item li { font-size: 14px; color: var(--t2); margin-bottom: 6px; line-height: 1.75; }
+.tl-item .talk-link {
+  display: inline-block; font-size: 13px; color: var(--accent);
+  margin-top: 8px; padding: 3px 0; border-bottom: 1px solid transparent;
+}
+.tl-item .talk-link:hover { border-bottom-color: var(--accent); }
 .talk-demo {
   display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 8px;
   border-radius: 20px; margin-left: 6px; vertical-align: 1px;
@@ -489,7 +494,8 @@ footer a { color: var(--accent); margin: 0 8px; }
   </section>
 
   <!-- 就业讲座（数据驱动：新增讲座只需在下方 TALKS 数组前部追加一个对象，无需改 HTML）
-       字段：date 显示时间 | title 主题 | host 主办单位 | place 地点(可空) | audience 受众对象 | brief 一句话简介 | demo true=示例占位 -->
+       字段：date 显示时间 | title 主题 | host 主办单位 | place 地点(可空) | audience 受众对象 | brief 一句话简介
+             | link 报道/新闻链接(可空，新标签页打开) | linkText 链接文字 | demo true=示例占位 -->
   <section id="talks">
     <div class="sec-h">
       <h2>就业讲座</h2><span class="en">CAREER TALKS</span>
@@ -506,7 +512,9 @@ footer a { color: var(--accent); margin: 0 8px; }
       place: '明远楼实验实训中心报告厅',
       audience: '大一、大二学生',
       brief: '基于知名招聘平台 2026 届岗位需求与全球青年就业趋势的低年级行动指南。',
-      demo: false
+      demo: false,
+      link: 'https://lgxy.sdmu.edu.cn/info/1021/5958.htm',
+      linkText: '山东管理学院讲座报道'
     },
     {
       date: '时间待定',
@@ -527,6 +535,8 @@ footer a { color: var(--accent); margin: 0 8px; }
         + '<div class="what">' + t.title + '</div>'
         + '<div class="where">主办：' + t.host + (t.place ? ' · 地点：' + t.place : '') + ' · 受众：' + t.audience + '</div>'
         + '<ul><li>' + t.brief + '</li></ul>'
+        + (t.link ? '<div><a class="talk-link" href="' + t.link + '" target="_blank" rel="noopener">'
+            + (t.linkText || '讲座报道') + ' ↗</a></div>' : '')
         + '</div>';
     }).join('');
   })();
