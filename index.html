@@ -189,6 +189,14 @@ section { background: #fff; border: 1px solid var(--line-soft); border-radius: 8
 .tl-item .where { font-size: 13.5px; color: var(--t2); margin-bottom: 10px; }
 .tl-item ul { margin: 8px 0 0 18px; }
 .tl-item li { font-size: 14px; color: var(--t2); margin-bottom: 6px; line-height: 1.75; }
+.talk-demo {
+  display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 8px;
+  border-radius: 20px; margin-left: 6px; vertical-align: 1px;
+  background: #FFF1E6; color: #C24E17; border: 1px solid #F2CBA9;
+}
+@media (max-width: 820px) {
+  .talk-demo { font-size: 10px; padding: 1px 6px; }
+}
 
 /* ---------- 能力三栏 ---------- */
 .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -355,6 +363,17 @@ footer a { color: var(--accent); margin: 0 8px; }
     </div>
     <div class="tl" data-page-node-id="vsAgPC8XXRWNmBv0hx92Uz">
 
+      <div class="tl-item">
+        <div class="when">2026.10.08 — 至今</div>
+        <div class="what">西安职信宝科技有限公司 · 负责人</div>
+        <div class="where">西安</div>
+        <ul>
+          <li>负责职信宝平台的开发设计与产品管理，围绕用户需求持续迭代产品功能与使用体验。</li>
+          <li>统筹推进研发落地，协调技术资源与开发节奏，把控版本计划与上线质量。</li>
+          <li>负责平台的营销推广与运营，拓展合作渠道，推动平台知名度与用户规模增长。</li>
+        </ul>
+      </div>
+
       <div class="tl-item" data-page-node-id="OxIIMCljSpNvh22HdAa84J">
         <div class="when" data-page-node-id="VKtBdHbiC6oKKUDtY87C5X">2021.07 — 至今</div>
         <div class="what" data-page-node-id="O4LaugqztraMwYsR1xONMD">猎聘大数据研究院 · 副院长</div>
@@ -469,6 +488,50 @@ footer a { color: var(--accent); margin: 0 8px; }
     </div>
   </section>
 
+  <!-- 就业讲座（数据驱动：新增讲座只需在下方 TALKS 数组前部追加一个对象，无需改 HTML）
+       字段：date 显示时间 | title 主题 | host 主办单位 | place 地点(可空) | audience 受众对象 | brief 一句话简介 | demo true=示例占位 -->
+  <section id="talks">
+    <div class="sec-h">
+      <h2>就业讲座</h2><span class="en">CAREER TALKS</span>
+      <span class="meta">面向高校与应届学生 · 持续更新</span>
+    </div>
+    <div class="tl" id="talkList"></div>
+  </section>
+  <script>
+  var TALKS = [
+    {
+      date: '2026.09.19（周六）14:00',
+      title: '看懂 2026 就业报告：领走给大一大二的四张"行动地图"',
+      host: '山东管理学院',
+      place: '明远楼实验实训中心报告厅',
+      audience: '大一、大二学生',
+      brief: '基于知名招聘平台 2026 届岗位需求与全球青年就业趋势的低年级行动指南。',
+      demo: false
+    },
+    {
+      date: '时间待定',
+      title: '【示例】AI 时代的求职准备：简历、面试与信息差',
+      host: '（示例占位 · 主办方待确认）',
+      place: '',
+      audience: '应届毕业生',
+      brief: '本条为占位示例，用于展示讲座条目的呈现格式；确认正式安排后直接替换本条。',
+      demo: true
+    }
+  ];
+  (function () {
+    var el = document.getElementById('talkList');
+    if (!el) return;
+    el.innerHTML = TALKS.map(function (t) {
+      return '<div class="tl-item">'
+        + '<div class="when">' + t.date + (t.demo ? '<span class="talk-demo">示例</span>' : '') + '</div>'
+        + '<div class="what">' + t.title + '</div>'
+        + '<div class="where">主办：' + t.host + (t.place ? ' · 地点：' + t.place : '') + ' · 受众：' + t.audience + '</div>'
+        + '<ul><li>' + t.brief + '</li></ul>'
+        + '</div>';
+    }).join('');
+  })();
+  </script>
+
   <!-- 教育 / 资质 -->
   <section data-page-node-id="blxOWiLtzmz3amFs5B4Scy">
     <div class="sec-h" data-page-node-id="DnWpFVBKn7nsRW5QAla3LG"><h2 data-page-node-id="cZ7hzUN9IlSYWJzTyo2HWT">教育背景与专业资质</h2><span class="en" data-page-node-id="9zztblVjCe0OcZvZXremNB">EDUCATION</span></div>
@@ -502,7 +565,7 @@ footer a { color: var(--accent); margin: 0 8px; }
   <div data-page-node-id="gkEdsPrD1WVCKsZjHjVlD8">© 2017—2026 权贵杰 · 个人永久页面 · 持续更新中</div>
   <div class="links" data-page-node-id="xPSZ5qQOxiOesyGdNsPoRv">
     <a href="mailto:quanguijie@126.com" data-page-node-id="oHMBPx7JKTYSxKizt0H25V">quanguijie@126.com</a> ·
-    <a href="#" id="vcs" data-page-node-id="dkk6uGCHaDHuaAky1tpyTI">v1.1 · 2026-09-10</a>
+    <a href="#" id="vcs" data-page-node-id="dkk6uGCHaDHuaAky1tpyTI">v1.2 · 2026-10-13</a>
   </div>
 </footer>
 
