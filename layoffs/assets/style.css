@@ -130,3 +130,6 @@ a:hover{text-decoration:underline}
   .foot .wrap{grid-template-columns:1fr}
   .meta{gap:16px}
 }
+
+.lnk{color:#ffd0c6 !important;text-decoration:none}
+.lnk:hover{text-decoration:underline}
