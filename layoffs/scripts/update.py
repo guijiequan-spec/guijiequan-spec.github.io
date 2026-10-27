@@ -51,6 +51,44 @@ def save(data):
         f.write(';\n')
 
 
+VERIFY_BY_STATUS = {
+    'confirmed': '已核实',
+    'rumor': '未核实',
+    'denied': '已核实（企业否认）',
+}
+PLACEHOLDER = ('未披露', '未公开', '不适用', '未量化')
+
+
+def _blank(v):
+    if v is None:
+        return True
+    s = str(v).strip()
+    return (not s) or any(s == p or s.startswith(p) for p in PLACEHOLDER)
+
+
+def normalize(it):
+    """补齐 2026 全年版新增字段，保证前端渲染与缺失标注一致。"""
+    for k in ('scope', 'dept', 'reason', 'pct_text'):
+        it.setdefault(k, None)
+    it.setdefault('pct_num', None)
+    it.setdefault('aggregate', False)
+    if not it.get('verify'):
+        it['verify'] = VERIFY_BY_STATUS.get(it.get('status'), '未核实')
+    miss = []
+    if not it.get('scale_num'):
+        miss.append('人数')
+    if _blank(it.get('pct_text')):
+        miss.append('占比')
+    if _blank(it.get('dept')):
+        miss.append('部门')
+    if _blank(it.get('scope')):
+        miss.append('地区')
+    if _blank(it.get('reason')):
+        miss.append('原因')
+    it['missing'] = miss
+    return it
+
+
 def merge(data, new_items, insights=None):
     items = data.get('items', [])
     index = {it.get('id'): i for i, it in enumerate(items)}
@@ -59,6 +97,7 @@ def merge(data, new_items, insights=None):
         if not it.get('id') or not it.get('date'):
             print('[skip] 缺少 id 或 date：%s' % it.get('company'))
             continue
+        it = normalize(it)
         if it['id'] in index:
             items[index[it['id']]] = it
             updated += 1

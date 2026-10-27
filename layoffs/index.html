@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>国内裁员动态日报 · 每日更新看板</title>
-<meta name="description" content="国内企业裁员 / 组织瘦身 / 关厂停产 / 用工政策动态每日汇总看板，含行业分布、趋势与原始来源链接">
+<title>2026 年裁员全景 · 国内裁员动态看板</title>
+<meta name="description" content="2026 年 1—10 月国内企业裁员全景看板：公司、日期、人数与占比、涉及部门与地区、裁员原因、原始来源链接，标注数据缺失与未核实条目">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
     <div class="brand">
       <span class="dot"></span>
       <div>
-        <h1>国内裁员动态日报</h1>
-        <p class="sub">每日汇总 · 企业裁员 / 组织瘦身 / 关厂停产 / 用工政策</p>
+        <h1>2026 年裁员全景</h1>
+        <p class="sub" id="m-period">企业裁员 / 组织瘦身 / 关厂停产 / 用工政策</p>
       </div>
     </div>
     <div class="meta">
@@ -29,9 +29,11 @@
 <div class="wrap main">
   <section class="kpis" id="kpis"></section>
 
+  <section class="panel cover" id="coverage"></section>
+
   <section class="panel filters">
     <div class="frow">
-      <input id="q" type="search" placeholder="搜索公司 / 行业 / 关键词，如：汽车、央企、N+1" />
+      <input id="q" type="search" placeholder="搜索公司 / 行业 / 部门 / 原因，如：光伏、中层、集采、N+1" />
       <select id="f-industry"><option value="">全部行业</option></select>
       <select id="f-status">
         <option value="">全部状态</option>
@@ -39,30 +41,37 @@
         <option value="rumor">媒体消息 / 传闻</option>
         <option value="denied">公司否认</option>
       </select>
-      <select id="f-range">
-        <option value="7">近 7 天</option>
-        <option value="30" selected>近 30 天</option>
-        <option value="3650">全部</option>
+      <select id="f-verify">
+        <option value="">全部核实状态</option>
+        <option value="已核实">已核实</option>
+        <option value="部分核实">部分核实</option>
+        <option value="未核实">未核实</option>
+      </select>
+      <select id="f-sort">
+        <option value="desc">时间倒序（新→旧）</option>
+        <option value="asc">时间正序（旧→新）</option>
       </select>
       <button id="reset" class="btn-ghost">重置</button>
     </div>
     <div class="frow chips" id="region-chips">
       <span class="chip-label">区域</span>
-      <label class="chip active"><input type="checkbox" value="国内" checked>国内</label>
-      <label class="chip active"><input type="checkbox" value="中国区" checked>外企中国区</label>
-      <label class="chip"><input type="checkbox" value="中国台湾">中国台湾</label>
-      <label class="chip"><input type="checkbox" value="境外">境外（参照）</label>
+      <label class="chip active"><input type="checkbox" data-region value="国内" checked>中国大陆</label>
+      <label class="chip active"><input type="checkbox" data-region value="中国区" checked>外企中国区</label>
+      <label class="chip active"><input type="checkbox" data-region value="中国香港" checked>中国香港</label>
+      <label class="chip active"><input type="checkbox" data-region value="中国台湾" checked>中国台湾</label>
+      <label class="chip"><input type="checkbox" data-region value="境外">境外（参照）</label>
+      <label class="chip"><input id="only-counted" type="checkbox">仅看有人数</label>
       <span class="fcount" id="fcount"></span>
     </div>
   </section>
 
   <section class="grid-2">
     <div class="panel">
-      <h2 class="p-title">近 14 日新增条目</h2>
+      <h2 class="p-title">2026 年逐月条目分布 <span class="tag-soft">按事件日期归月</span></h2>
       <div id="chart-trend" class="chart"></div>
     </div>
     <div class="panel">
-      <h2 class="p-title">行业分布</h2>
+      <h2 class="p-title">行业分布 <span class="tag-soft">Top 10</span></h2>
       <div id="chart-industry" class="chart"></div>
     </div>
   </section>
@@ -73,7 +82,7 @@
   </section>
 
   <section class="panel">
-    <h2 class="p-title">动态列表 <span class="tag-soft">按时间倒序</span></h2>
+    <h2 class="p-title">事件明细 <span class="tag-soft">每条含日期 / 人数 / 占比 / 部门 / 地区 / 原因 / 来源</span></h2>
     <div id="list" class="list"></div>
     <div id="empty" class="empty" hidden>没有符合条件的记录，试试放宽筛选条件。</div>
   </section>
@@ -88,21 +97,21 @@
   <div class="wrap">
     <div class="fcol">
       <h3>收录口径</h3>
-      <p>仅收录中国大陆境内的企业裁员、组织瘦身、关厂停产、用工政策调整，以及外企中国区相关动作；全球性裁员作为中国市场参照单独标注，默认不参与统计。</p>
+      <p>主体为 2026 年 1 月 1 日至 10 月 27 日中国大陆境内的企业裁员、组织优化、关厂停产、待岗分流及用工政策；外企中国区动作单列「中国区」，中国香港、中国台湾单列，全球性裁员标注「境外」作为参照，默认不参与国内统计。</p>
     </div>
     <div class="fcol">
       <h3>可信度分级</h3>
-      <p><span class="c-dot confirmed"></span><b>已确认</b>：公司公告、监管备案、官方回应或权威媒体确认。<br>
+      <p><span class="c-dot confirmed"></span><b>已确认</b>：公司公告、财报、监管备案、官方回应或权威媒体确认。<br>
       <span class="c-dot rumor"></span><b>媒体消息 / 传闻</b>：未获企业官方确认，仅媒体或从业者披露。<br>
       <span class="c-dot denied"></span><b>公司否认</b>：传闻已被企业明确否认，保留以记录舆情。</p>
     </div>
     <div class="fcol">
-      <h3>更新机制</h3>
-      <p>每日 09:00 由自动化任务检索主流财经 / 行业媒体与公众号信源，去重后写入 <code>data/layoffs.json</code> 并重新发布，页面自动生效。所有条目均附原始来源链接，可逐条回溯。</p>
+      <h3>缺失标注规则</h3>
+      <p>人数、占比、部门、地区、原因任一未从公开信源获得，即在该条目标注「数据缺失 / 待确认」，并保留空值；<b>不做任何估算或补全</b>。仅有月份无具体日期者，按当月归档并在口径提醒中说明。</p>
     </div>
     <div class="fcol">
       <h3>免责声明</h3>
-      <p>本看板为公开信息汇编，不构成任何投资或求职建议。涉及人数的口径（全球 / 中国区 / 单一工厂）已在摘要中注明，未披露规模者不做估算。</p>
+      <p>本看板为公开信息汇编，不构成投资或求职建议。人数口径（全球 / 中国区 / 单一工厂 / 期末人数差额）已在每条的口径提醒中注明，不同口径之间<b>不可相加</b>。</p>
     </div>
   </div>
 </footer>
