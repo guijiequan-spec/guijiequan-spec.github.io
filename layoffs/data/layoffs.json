@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27 12:15",
+  "updated_at": "2026-10-27 12:26",
   "period_note": "2026 年 1 月 — 10 月 27 日 · 全年汇总（含 10 月每日增量）",
   "coverage": {
     "from": "2026-01-01",
@@ -31,8 +31,10 @@
       "aggregate": false,
       "verify": "已核实",
       "missing": [
-        "占比"
-      ]
+        "占比",
+        "日期"
+      ],
+      "date_approx": true
     },
     {
       "id": "pfizer-20261026",
@@ -57,7 +59,8 @@
       "verify": "已核实",
       "missing": [
         "人数"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "laoganma-20261026",
@@ -83,7 +86,8 @@
       "missing": [
         "人数",
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "weijing-chuneng-20261026",
@@ -109,7 +113,8 @@
       "missing": [
         "人数",
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "volvo-20261026",
@@ -132,7 +137,8 @@
       "pct_num": 6,
       "aggregate": false,
       "verify": "已核实",
-      "missing": []
+      "missing": [],
+      "date_approx": false
     },
     {
       "id": "bayerr-china-20261026",
@@ -157,8 +163,10 @@
       "verify": "未核实",
       "missing": [
         "人数",
-        "占比"
-      ]
+        "占比",
+        "日期"
+      ],
+      "date_approx": true
     },
     {
       "id": "microsoft-veo-20261026",
@@ -183,7 +191,8 @@
       "verify": "已核实",
       "missing": [
         "人数"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "dispatch-20261026",
@@ -208,7 +217,8 @@
       "verify": "已核实",
       "missing": [
         "人数"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "zhongjin-fuzhao-20261026",
@@ -234,7 +244,8 @@
       "missing": [
         "人数",
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "gaoxin-lingshou-20261025",
@@ -260,7 +271,8 @@
       "missing": [
         "人数",
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "dazhong-jituan-20261025",
@@ -285,7 +297,8 @@
       "verify": "已核实",
       "missing": [
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "wujing-dongli-20261025",
@@ -311,7 +324,8 @@
       "missing": [
         "人数",
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "ebay-cn-20261024",
@@ -336,7 +350,8 @@
       "verify": "已核实（企业否认）",
       "missing": [
         "人数"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "autocar-unknown-20261023",
@@ -361,7 +376,8 @@
       "verify": "未核实",
       "missing": [
         "人数"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "guoban-ai-employment-20261023",
@@ -387,7 +403,8 @@
       "missing": [
         "人数",
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "qualcomm-20261022",
@@ -414,8 +431,10 @@
         "人数",
         "占比",
         "部门",
-        "地区"
-      ]
+        "地区",
+        "其他"
+      ],
+      "date_approx": false
     },
     {
       "id": "top5-realestate-20261022",
@@ -441,7 +460,8 @@
       "missing": [
         "人数",
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "bmw-20261022",
@@ -466,7 +486,8 @@
       "verify": "已核实",
       "missing": [
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "zhongyuan-youtian-20261022",
@@ -491,7 +512,8 @@
       "verify": "已核实",
       "missing": [
         "人数"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "ebay-global-20261022",
@@ -514,7 +536,8 @@
       "pct_num": 9,
       "aggregate": false,
       "verify": "已核实",
-      "missing": []
+      "missing": [],
+      "date_approx": false
     },
     {
       "id": "eyepoint-20261021",
@@ -539,7 +562,8 @@
       "verify": "已核实",
       "missing": [
         "人数"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "crec-20261020",
@@ -564,7 +588,8 @@
       "verify": "已核实",
       "missing": [
         "人数"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "cseoc-20261017",
@@ -589,7 +614,8 @@
       "verify": "未核实",
       "missing": [
         "人数"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "muth-wuxi-20261016",
@@ -612,7 +638,8 @@
       "pct_num": 100,
       "aggregate": false,
       "verify": "已核实",
-      "missing": []
+      "missing": [],
+      "date_approx": false
     },
     {
       "id": "lg-huizhou-20261016",
@@ -638,7 +665,8 @@
       "missing": [
         "人数",
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "li-auto-20261015",
@@ -656,12 +684,15 @@
       "reason": "增程转纯电、产品换代、上游零部件涨价三重压力；一年巨亏 40 亿元",
       "status": "confirmed",
       "verify": "已核实",
-      "missing": [],
+      "missing": [
+        "日期"
+      ],
       "summary": "理想汽车员工从 2025 年 6 月末减至 2026 年 6 月末的 27048 人，一年净减 3970 人、降幅约 12.8%。销售职能人数同比减少 13.8%（12862→11082 人），零售门店由 548 家降至 495 家。2025 年下半年至 2026 年 3 月，至少 12 位副总裁级核心负责人离职，自动驾驶部门被拆分重组为基座模型、软件本体、硬件本体三大团队。",
       "source_name": "OFweek 新能源汽车网",
       "source_url": "https://nev.ofweek.com/2026-10/ART-71008-12003-30708064.html",
       "note": "3970 人为期末人数差额（含主动离职）；日期按财报期后报道归档，具体公告日待确认。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": true
     },
     {
       "id": "gsk-20261014",
@@ -686,7 +717,8 @@
       "verify": "已核实",
       "missing": [
         "占比"
-      ]
+      ],
+      "date_approx": false
     },
     {
       "id": "nio-20261009",
@@ -709,7 +741,8 @@
       "pct_num": 23.2,
       "aggregate": false,
       "verify": "已核实",
-      "missing": []
+      "missing": [],
+      "date_approx": false
     },
     {
       "id": "innolux-20261008",
@@ -732,7 +765,8 @@
       "pct_num": 10,
       "aggregate": false,
       "verify": "未核实",
-      "missing": []
+      "missing": [],
+      "date_approx": false
     },
     {
       "id": "porsche-20261008",
@@ -755,7 +789,8 @@
       "pct_num": 20,
       "aggregate": false,
       "verify": "已核实",
-      "missing": []
+      "missing": [],
+      "date_approx": false
     },
     {
       "id": "longi-20260930",
@@ -778,7 +813,8 @@
       "source_name": "新浪财经 / 中国能源产业发展网",
       "source_url": "https://finance.sina.com.cn/roll/2026-09-23/doc-inisusym1363082.shtml",
       "note": "4.2 万为两年累计期末人数差额，非 2026 年单年裁员数；与「139 家光伏企业减员 22 万」为不同层级口径。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "huafa-20260930",
@@ -804,7 +840,8 @@
       "source_name": "腾讯新闻",
       "source_url": "https://news.qq.com/rain/a/20261020A04K4C00",
       "note": "「内部通知」未经公司公告确认，按传闻处理；「进 1 出 2」为编制规则，非实际裁员比例。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "pv-industry-20260930",
@@ -830,7 +867,8 @@
       "source_name": "21 财经 / 中国能源产业发展网",
       "source_url": "https://m.21jingji.com/article/20260917/herald/ea746cc52db6971af7bcdeff74d3124b.html",
       "note": "本条为行业汇总口径，含隆基、东方日升等个体，统计时不可与个体条目相加。",
-      "aggregate": true
+      "aggregate": true,
+      "date_approx": false
     },
     {
       "id": "dongfang-risheng-20260930",
@@ -853,7 +891,8 @@
       "source_name": "21 财经",
       "source_url": "https://m.21jingji.com/article/20260917/herald/ea746cc52db6971af7bcdeff74d3124b.html",
       "note": "两年累计差额口径；2026 年上半年确认辞退福利 420.52 万元，同比下降 73%，显示进入减员尾期。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "lv-cn-20260831",
@@ -878,7 +917,8 @@
       "source_name": "亨德森猎头（综合新华社、红星资本局、第一财经）",
       "source_url": "http://www.hendersonexecutive.com/news/228.html",
       "note": "关店必然伴随店员安置，但公司未披露人数与补偿方案。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "nokia-hz-20260831",
@@ -897,13 +937,15 @@
       "status": "confirmed",
       "verify": "已核实",
       "missing": [
-        "部门"
+        "部门",
+        "其他"
       ],
       "summary": "2026 年 8 月，诺基亚确认关闭杭州无线技术研发中心，约 1600 名员工面临岗位调整，分三批（9 月至 12 月）完成。该中心曾是诺基亚在华最大研发基地、全球 5G 与云产品重要支点。8 月 18 日《南华早报》进一步报道，诺基亚将分批裁撤中国大陆移动网络与网络基础设施业务，关闭多个办公点与工厂，未来在华可能仅保留售后服务。离职员工获 N+3 补偿。",
       "source_name": "南方日报 / 澎湃新闻",
       "source_url": "https://m.thepaper.cn/newsDetail_forward_33800235",
       "note": "1600 人为杭州研发中心口径；在华最终裁员总数未披露，勿与 7200 人简单相减。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "apple-20260831",
@@ -928,7 +970,8 @@
       "source_name": "Business Insider（裁员追踪）",
       "source_url": "https://businessinsider.com/recent-company-layoffs-laying-off-workers-2026",
       "note": "60 为直接裁撤数，200+ 为总体影响（含间接），不可混用。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "wangwang-20260831",
@@ -954,7 +997,8 @@
       "source_name": "ZAKER（引财新、新浪财经）",
       "source_url": "https://app.myzaker.com/news/article.php?f=normal&pk=6a8ad35f8e9f0921717496ec",
       "note": "1000 人为目标值、400+ 为已完成数，两者不可混用。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "qihang-xinweilai-20260831",
@@ -979,7 +1023,8 @@
       "source_name": "扬子晚报（封面新闻转载）",
       "source_url": "https://www.163.com/dy/article/L6SA7CRS0514D3UH.html",
       "note": "与武汉学程思远为关联公司但独立主体，人数分别统计、不重复计算家长损失金额。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "vanke-20260831",
@@ -1005,7 +1050,8 @@
       "source_name": "ZAKER（综合行业披露）",
       "source_url": "https://app.myzaker.com/news/article.php?f=Normal&pk=6aa8ad36b15ec018e903c260",
       "note": "万科官方口径为「每年例行组织检视和相应优化」，不单独披露某轮人数；12468 人为五年累计差额。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "xingyu-20260827",
@@ -1028,7 +1074,8 @@
       "source_name": "央广网",
       "source_url": "https://www.cnr.cn/jrpd/jdt/20260907/t20260907_527806722.shtml",
       "note": "事件因「裁撤应届生」引发舆情，公司公开道歉并追责，属已确认案例。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "xuecheng-siyuan-20260816",
@@ -1053,7 +1100,8 @@
       "source_name": "扬子晚报（封面新闻转载）",
       "source_url": "https://www.163.com/dy/article/L6SA7CRS0514D3UH.html",
       "note": "属「跑路式」裁员，员工补偿基本落空；与北京起航新未来为关联公司，两条分列以避免重复计数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "hongguang-20260731",
@@ -1071,12 +1119,15 @@
       "reason": "经营困难、已存在被执行风险；重资产薄利润",
       "status": "confirmed",
       "verify": "已核实",
-      "missing": [],
+      "missing": [
+        "日期"
+      ],
       "summary": "宏广科技宣布解散，涉及 112 名员工，近乎全员参保。解散前一日单独发布工资通告，明确 6 月全部薪资在办离职当日足额发放，统一出具离职证明并签订协商解除协议。网传补偿按 15% 协商核算，与法定 N 倍存在差距，但建立在自愿协商基础上。",
       "source_name": "国际电子商情",
       "source_url": "https://www.esmchina.com/news/14419.html",
       "note": "具体解散日期未公开，按报道期（7 月）归档，日期待确认。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": true
     },
     {
       "id": "tiktok-20260731",
@@ -1101,7 +1152,8 @@
       "source_name": "Business Insider（裁员追踪）",
       "source_url": "https://businessinsider.com/recent-company-layoffs-laying-off-workers-2026",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "jiafeng-dg-20260714",
@@ -1124,7 +1176,8 @@
       "source_name": "深圳市电子商会",
       "source_url": "https://www.seccw.com/Document/detail/id/47890.html",
       "note": "41 人为 2025 年工商参保人数，与实际用工可能略有差异；补偿金兑付存在不确定性。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "tencent-game-20260708",
@@ -1150,7 +1203,8 @@
       "source_name": "A5 站长网 / 羊城晚报",
       "source_url": "https://m.admin5.com/article/20260720/1065634.shtml",
       "note": "属组织架构调整，未见裁员公告；与「裁员」区分记录。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "intel-20260707",
@@ -1173,7 +1227,8 @@
       "source_name": "公开报道综述（Layoffs.fyi / 财报口径）",
       "source_url": "https://businessinsider.com/recent-company-layoffs-laying-off-workers-2026",
       "note": "529 为俄勒冈州 WARN 申报数，与代工部门 8170—10890 的计划数不可混用。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "jd-retail-20260707",
@@ -1199,7 +1254,8 @@
       "source_name": "羊城晚报 / 搜狐",
       "source_url": "https://ycpai.ycwb.com/content/ikimvkltjj/content_54224233.html",
       "note": "官方口径为「管理层级压缩」而非裁员，被取消管理者身份者多数转岗，实际离职人数未披露。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "microsoft-20260706",
@@ -1222,7 +1278,8 @@
       "source_name": "公开报道综述（Layoffs.fyi / 财报口径）",
       "source_url": "https://businessinsider.com/recent-company-layoffs-laying-off-workers-2026",
       "note": "与 10 月 26 日「向 6 万人开自愿买断」为两起不同动作，不可相加。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "porsche-20260705",
@@ -1248,7 +1305,8 @@
       "source_name": "中国新闻周刊（今日头条转载）",
       "source_url": "https://www.toutiao.com/article/7660129145908757055/",
       "note": "4000 为「考虑中」的媒体口径，未落地；累计 9000 岗见 10 月 8 日条。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "lilly-cn-20260701",
@@ -1274,7 +1332,8 @@
       "source_name": "腾讯新闻（引一度医药）",
       "source_url": "https://news.qq.com/rain/a/20260713A08KS700",
       "note": "以内部转岗（划入 CMH）为主，实际解除劳动合同人数未披露。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "astrazeneca-cvrm-20260630",
@@ -1299,7 +1358,8 @@
       "source_name": "腾讯新闻（引一度医药）",
       "source_url": "https://news.qq.com/rain/a/20260713A08KS700",
       "note": "30% 为单一团队比例，非中国区整体。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "zf-20260630",
@@ -1324,7 +1384,8 @@
       "source_name": "ZAKER（引多家媒体）",
       "source_url": "https://app3.myzaker.com/news/article.php?pk=6a45b66d8e9f09688728234e",
       "note": "为规划上限，非已完成人数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "sanofi-dm-20260630",
@@ -1350,7 +1411,8 @@
       "source_name": "腾讯新闻（引一度医药）",
       "source_url": "https://news.qq.com/rain/a/20260713A08KS700",
       "note": "以合同到期不续签为主，法律性质上不完全等同于经济性裁员。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "yonyou-20260630",
@@ -1373,7 +1435,8 @@
       "source_name": "界面新闻",
       "source_url": "https://www.jiemian.com/article/15049213.html",
       "note": "7451 人为期末人数差额（含主动离职），非单次裁员公告数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "continental-20260630",
@@ -1398,7 +1461,8 @@
       "source_name": "ZAKER（引多家媒体）",
       "source_url": "https://app3.myzaker.com/news/article.php?pk=6a45b66d8e9f09688728234e",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "rivian-20260630",
@@ -1424,7 +1488,8 @@
       "source_name": "ZAKER（引多家媒体）",
       "source_url": "https://app3.myzaker.com/news/article.php?pk=6a45b66d8e9f09688728234e",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "lucid-20260630",
@@ -1447,7 +1512,8 @@
       "source_name": "ZAKER（引多家媒体）",
       "source_url": "https://app3.myzaker.com/news/article.php?pk=6a45b66d8e9f09688728234e",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "vw-group-20260626",
@@ -1472,7 +1538,8 @@
       "source_name": "中国新闻周刊（今日头条转载）",
       "source_url": "https://www.toutiao.com/article/7660129145908757055/",
       "note": "10 万为媒体援引知情人士的口径，公司未正式确认；与 10 月 25 日「再削减 1.2 万岗」属同一重组进程的不同阶段。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "broker-industry-20260603",
@@ -1495,7 +1562,8 @@
       "source_name": "网易新闻（引 Wind、上交所）",
       "source_url": "https://c.m.163.com/news/a/KUNRDJLQ0519AP56.html",
       "note": "行业汇总口径，与「中邮证券营业部撤销」个体条目不可相加。",
-      "aggregate": true
+      "aggregate": true,
+      "date_approx": false
     },
     {
       "id": "hologic-cn-20260531",
@@ -1513,12 +1581,15 @@
       "reason": "中国区业绩下滑、成本上升",
       "status": "confirmed",
       "verify": "已核实",
-      "missing": [],
+      "missing": [
+        "日期"
+      ],
       "summary": "2026 年初，豪洛捷确认已在中国完成一轮组织重整与降本行动，裁撤 89 人，主要集中在销售体系。裁员完成后，Hologic 中国区员工规模仅剩约 90—110 人，裁员比例接近一半。",
       "source_name": "同花顺财经",
       "source_url": "https://m.10jqka.com.cn/20260515/c676732311.shtml",
       "note": "公司确认为「年初完成」，具体日期未公布，按报道期归档；50% 为依据前后人数的测算值。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": true
     },
     {
       "id": "meituan-20260531",
@@ -1541,7 +1612,8 @@
       "source_name": "腾讯新闻 / 联合早报",
       "source_url": "https://news.qq.com/rain/a/LNK2026071029077800",
       "note": "2000 人为公司口径的「不足」值，实际可能更低；占 2025 年 112123 名员工的 1.8% 以内。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "cosmo-cn-20260531",
@@ -1566,7 +1638,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://news.qq.com/rain/a/20260521A03YTC00",
       "note": "团队整体解散但人数未披露；权益已移交，部分岗位可能转入康哲。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "cisco-20260531",
@@ -1589,7 +1662,8 @@
       "source_name": "Business Insider（裁员追踪）",
       "source_url": "https://businessinsider.com/recent-company-layoffs-laying-off-workers-2026",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "paypal-20260531",
@@ -1612,7 +1686,8 @@
       "source_name": "Business Insider（裁员追踪）",
       "source_url": "https://businessinsider.com/recent-company-layoffs-laying-off-workers-2026",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "meta-20260531",
@@ -1635,7 +1710,8 @@
       "source_name": "Business Insider / 公开财报综述",
       "source_url": "https://businessinsider.com/recent-company-layoffs-laying-off-workers-2026",
       "note": "8000 为离职人数、7000 为转岗人数，两者不可相加为「减少 1.5 万」。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "jd-nexus-20260527",
@@ -1661,7 +1737,8 @@
       "source_name": "腾讯新闻",
       "source_url": "https://news.qq.com/rain/a/20260608A07FOE00",
       "note": "本条为「否认裁员」类记录，用于对照行业 AI 替代趋势，不纳入裁员统计。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "takeda-20260513",
@@ -1686,7 +1763,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://mp.weixin.qq.com/s?__biz=MzA3OTYyMjk0MQ==&mid=2661192733&idx=1&sn=808f02f49fd852b147fc6f252ec6ea91",
       "note": "4500 为 FY2026 计划影响的岗位数，非已完成人数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "bridgestone-tw-20260511",
@@ -1709,7 +1787,8 @@
       "source_name": "华盛通",
       "source_url": "https://www.hstong.com/news/detail/26051513100778397",
       "note": "中国台湾地区口径，不计入中国大陆统计。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "cloudflare-20260507",
@@ -1732,7 +1811,8 @@
       "source_name": "Business Insider（裁员追踪）",
       "source_url": "https://businessinsider.com/recent-company-layoffs-laying-off-workers-2026",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "revvity-cn-20260505",
@@ -1758,7 +1838,8 @@
       "source_name": "同花顺财经",
       "source_url": "https://m.10jqka.com.cn/20260515/c676732311.shtml",
       "note": "业务剥离通常伴随团队转移或裁撤，具体人数未披露。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "biontech-20260505",
@@ -1783,7 +1864,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://mp.weixin.qq.com/s?__biz=MzA3OTYyMjk0MQ==&mid=2661192733&idx=1&sn=808f02f49fd852b147fc6f252ec6ea91",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "bank-industry-20260430",
@@ -1808,7 +1890,8 @@
       "source_name": "今日头条（引银行业协会数据）",
       "source_url": "https://m.toutiao.com/article/7651636497375871540",
       "note": "28%、32% 为同比降幅而非裁员比例；行业汇总口径，不计入企业逐条统计。",
-      "aggregate": true
+      "aggregate": true,
+      "date_approx": false
     },
     {
       "id": "pfizer-ie-20260430",
@@ -1831,7 +1914,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://mp.weixin.qq.com/s?__biz=MzA3OTYyMjk0MQ==&mid=2661192733&idx=1&sn=808f02f49fd852b147fc6f252ec6ea91",
       "note": "单一工厂口径；辉瑞 10 月另有多地裁员，见「辉瑞（美国/意大利）」条。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "nike-20260430",
@@ -1856,7 +1940,8 @@
       "source_name": "Business Insider（裁员追踪）",
       "source_url": "https://businessinsider.com/recent-company-layoffs-laying-off-workers-2026",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "snap-20260430",
@@ -1879,7 +1964,8 @@
       "source_name": "Business Insider（裁员追踪）",
       "source_url": "https://businessinsider.com/recent-company-layoffs-laying-off-workers-2026",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "bms-20260420",
@@ -1904,7 +1990,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://mp.weixin.qq.com/s?__biz=MzA3OTYyMjk0MQ==&mid=2661192733&idx=1&sn=808f02f49fd852b147fc6f252ec6ea91",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "jd-chip-20260416",
@@ -1930,7 +2017,8 @@
       "source_name": "新浪财经",
       "source_url": "https://finance.sina.com.cn/wm/2026-04-18/doc-inhuvzus2858678.shtml",
       "note": "「解散」与「主体切换」性质不同，本条按未核实处理；不得据传闻言断裁员人数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "astellas-20260414",
@@ -1953,7 +2041,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://mp.weixin.qq.com/s?__biz=MzA3OTYyMjk0MQ==&mid=2661192733&idx=1&sn=808f02f49fd852b147fc6f252ec6ea91",
       "note": "单一基地口径。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "novartis-20260411",
@@ -1978,7 +2067,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://mp.weixin.qq.com/s?__biz=MzA3OTYyMjk0MQ==&mid=2661192733&idx=1&sn=808f02f49fd852b147fc6f252ec6ea91",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "novo-global-20260401",
@@ -2003,7 +2093,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://mp.weixin.qq.com/s?__biz=MzA3OTYyMjk0MQ==&mid=2661192733&idx=1&sn=808f02f49fd852b147fc6f252ec6ea91",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "iflytek-20260331",
@@ -2028,7 +2119,8 @@
       "source_name": "澎湃新闻 / IT时报",
       "source_url": "https://thepaper.cn/newsDetail_forward_32796535",
       "note": "公司明确否认，本条仅作为舆情记录保留，不纳入统计。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "coloplast-cn-20260331",
@@ -2054,7 +2146,8 @@
       "source_name": "同花顺财经",
       "source_url": "https://m.10jqka.com.cn/20260515/c676732311.shtml",
       "note": "公司未量化人数，「大规模」为定性表述。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "xiaomi-20260331",
@@ -2077,7 +2170,8 @@
       "source_name": "澎湃新闻（财报数据）",
       "source_url": "https://thepaper.cn/newsDetail_forward_33815511",
       "note": "3655 人为财报期末人数差额（含主动离职），非公司公布的裁员数；公司否认「规模裁员」表述。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "netease-ies-20260318",
@@ -2103,7 +2197,8 @@
       "source_name": "澎湃新闻 / IT时报",
       "source_url": "https://thepaper.cn/newsDetail_forward_32796535",
       "note": "清退对象为外包人员，不计入正式员工裁员口径。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "astrazeneca-cn-20260303",
@@ -2128,7 +2223,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://news.qq.com/rain/a/20260521A03YTC00",
       "note": "500 人为县域团队调整规模，其中含转岗与离职，非全部解除劳动合同。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "muxi-20260228",
@@ -2154,7 +2250,8 @@
       "source_name": "商状元（天眼查数据）",
       "source_url": "https://www.shangyexinzhi.com/article/31144319.html",
       "note": "注销不等于裁员，员工是否随业务转移未披露。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "liunaixi-jinan-20260228",
@@ -2179,7 +2276,8 @@
       "source_name": "中购联",
       "source_url": "https://www.mallchina.org.cn/page5?article_id=600",
       "note": "员工以内部转岗为主，实际解除劳动合同人数未披露。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "msd-20260227",
@@ -2204,7 +2302,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://mp.weixin.qq.com/s?__biz=MzA3OTYyMjk0MQ==&mid=2661192733&idx=1&sn=808f02f49fd852b147fc6f252ec6ea91",
       "note": "单一工厂口径，非默沙东全球人数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "viatris-20260226",
@@ -2227,7 +2326,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://mp.weixin.qq.com/s?__biz=MzA3OTYyMjk0MQ==&mid=2661192733&idx=1&sn=808f02f49fd852b147fc6f252ec6ea91",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "pv-henan-20260211",
@@ -2248,13 +2348,14 @@
       "missing": [
         "人数",
         "占比",
-        "主体"
+        "其他"
       ],
       "summary": "据数字新能源 DataBM.com 报道，河南一家光伏企业宣布自 2026 年 2 月 11 日起停产放假，复工时间另行通知，放假期间按河南省最低工资标准 2350 元的 90% 发放，个人社保部分由公司代扣代缴。同期江苏常州一家光伏企业以「生产经营发生重大困难」为由实施经济性裁员，另有江苏企业自 3 月 1 日起高管降薪 30%、其余人员降薪 10%—20%。",
       "source_name": "数字新能源 DataBM.com",
       "source_url": "https://m.databm.com/news/62762325251386115.html",
       "note": "报道未点名企业，属行业性样本；「放假」不等于解除劳动合同，不计入裁员人数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "chanlun-heung-hk-20260205",
@@ -2279,7 +2380,8 @@
       "source_name": "香港劳权监察",
       "source_url": "https://hklabourrights.org/?lang=zh-hant&p=14627",
       "note": "未披露员工人数与补偿方案。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "gsk-rd-20260202",
@@ -2302,7 +2404,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://mp.weixin.qq.com/s?__biz=MzA3OTYyMjk0MQ==&mid=2661192733&idx=1&sn=808f02f49fd852b147fc6f252ec6ea91",
       "note": "",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "sams-restaurant-hk-20260201",
@@ -2327,7 +2430,8 @@
       "source_name": "香港劳权监察",
       "source_url": "https://hklabourrights.org/?lang=zh-hant&p=14627",
       "note": "未披露员工人数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "recordati-cn-20260131",
@@ -2352,7 +2456,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://news.qq.com/rain/a/20260521A03YTC00",
       "note": "公司直接注销而非裁员，员工人数未披露。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "benoy-hk-20260131",
@@ -2370,12 +2475,15 @@
       "reason": "香港建造业私营工程量大幅减少",
       "status": "confirmed",
       "verify": "已核实",
-      "missing": [],
+      "missing": [
+        "日期"
+      ],
       "summary": "2026 年 1 月中旬，国际建筑设计公司贝诺（Benoy）突然宣布结束香港业务并关闭新加坡办事处，约 50 名建筑师即时离职。该公司在港营运近 20 年，曾参与圆方商场、希慎广场、如心广场等项目设计。",
       "source_name": "香港劳权监察",
       "source_url": "https://hklabourrights.org/?lang=zh-hant&p=14627",
       "note": "具体宣布日期为 1 月中旬，按月底归档。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": true
     },
     {
       "id": "citi-apac-20260131",
@@ -2401,7 +2509,8 @@
       "source_name": "香港劳权监察",
       "source_url": "https://hklabourrights.org/?lang=zh-hant&p=14627",
       "note": "1000 人为集团/区域传闻口径，非香港单地人数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "cathay-20260131",
@@ -2427,7 +2536,8 @@
       "source_name": "香港劳权监察（引彭博）",
       "source_url": "https://hklabourrights.org/?lang=zh-hant&p=14627",
       "note": "5% 为成本削减目标，不是裁员人数占比，勿混用。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "zhonghai-estate-20260131",
@@ -2453,7 +2563,8 @@
       "source_name": "明源云 / 中智咨询（搜狐转载）",
       "source_url": "https://www.sohu.com/a/1078591624_99901588",
       "note": "架构调整本身未公布裁员人数；「20%—40%」为行业整体缩编区间，非中海单一数据。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "lg-yantai-20260131",
@@ -2478,7 +2589,8 @@
       "source_name": "上海厂房网",
       "source_url": "https://www.021cf.cn/info/news-tudi/202621215262523.htm",
       "note": "具体关停日在 2026 年初，精确日期待确认，按 1 月底归档。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": true
     },
     {
       "id": "amazon-cn-20260126",
@@ -2503,7 +2615,8 @@
       "source_name": "中国经营网",
       "source_url": "http://www.cb.com.cn/index/show/gs1/cv/cv12546181131",
       "note": "1.6 万为全球口径，中国区人数未单独披露，不可与国内企业加总。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "xibei-20260115",
@@ -2521,12 +2634,15 @@
       "reason": "预制菜舆情后客流与营收下滑，现金流承压，被迫断臂自救",
       "status": "confirmed",
       "verify": "已核实",
-      "missing": [],
+      "missing": [
+        "日期"
+      ],
       "summary": "2026 年 1 月中旬，贾国龙在呼和浩特内部会议上宣布关闭全国 102 家门店，约占门店总数三成，涉及约 4000 名员工；总部同步裁员，由 500 余人压缩至 200 余人。离职方案分三档：停薪留职、发 2025 年部分绩效后主动离职、按 N 倍补偿但分期一年支付或以转股份形式解决。至 10 月，实际关店已达约 150 家。",
       "source_name": "36氪（新浪财经转载）",
       "source_url": "https://www.toutiao.com/article/7614096136244888114",
       "note": "102 家为 1 月宣布的计划数，实际关店数后续扩大至约 150 家；4000 人为媒体测算的门店员工影响数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": true
     },
     {
       "id": "cmschina-sec-20260107",
@@ -2552,7 +2668,8 @@
       "source_name": "网易新闻（引上交所数据）",
       "source_url": "https://c.m.163.com/news/a/KUNRDJLQ0519AP56.html",
       "note": "本条为单个营业部撤销事件，人员影响未单独披露；行业口径减员见「证券行业经纪人」条。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "sincere-hk-20260104",
@@ -2577,7 +2694,8 @@
       "source_name": "香港劳权监察",
       "source_url": "https://hklabourrights.org/?lang=zh-hant&p=14627",
       "note": "未披露受影响员工人数与安置方案。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     },
     {
       "id": "nnovo-cn-20260101",
@@ -2602,7 +2720,8 @@
       "source_name": "腾讯新闻（引医趋势）",
       "source_url": "https://news.qq.com/rain/a/20260521A03YTC00",
       "note": "9.8% 为媒体统计口径，公司未公布中国区具体人数。",
-      "aggregate": false
+      "aggregate": false,
+      "date_approx": false
     }
   ],
   "insights": [

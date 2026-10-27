@@ -172,6 +172,13 @@ ENRICH = {
         pct_text="逾一成", pct_num=10),
 }
 
+# 仅有月份 / 报道日、无确切公告日的条目：在 missing 中标注「日期」
+DATE_APPROX = {
+    "netflix-20261027", "bayerr-china-20261026", "li-auto-20261015",
+    "hongguang-20260731", "benoy-hk-20260131", "hologic-cn-20260531",
+    "xibei-20260115", "lg-yantai-20260131",
+}
+
 VERIFY_BY_STATUS = {
     "confirmed": "已核实",
     "rumor": "未核实",
@@ -243,7 +250,10 @@ def normalize(it, is_new):
     for m in auto + manual:
         if m not in merged:
             merged.append(m)
+    if out["id"] in DATE_APPROX and "日期" not in merged:
+        merged.append("日期")
     out["missing"] = merged
+    out["date_approx"] = out["id"] in DATE_APPROX
     return out
 
 

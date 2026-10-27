@@ -152,7 +152,7 @@
       ];
 
       var rows = [
-        ['裁员日期', it.date],
+        ['裁员日期', it.date + (it.date_approx ? '（月内待确认）' : '')],
         ['涉及人数', it.scale_text || '未披露'],
         ['人数占比', it.pct_text || '未披露'],
         ['涉及部门', it.dept || '未披露'],
@@ -181,7 +181,7 @@
         '<div class="head"><span class="co">' + esc(it.company) + '</span>' +
         '<span class="badge ' + it.status + '">' + STATUS_TEXT[it.status] + '</span>' +
         '<span class="verify ' + verifyCls + '">' + esc(it.verify || '未核实') + '</span>' +
-        '<span class="date">' + esc(it.date) + '</span></div>' +
+        '<span class="date">' + esc(it.date) + (it.date_approx ? ' ≈' : '') + '</span></div>' +
         '<p class="sum">' + esc(it.summary) + '</p>' +
         '<div class="fgrid">' + grid + '</div>' +
         '<div class="facts">' + facts.join('') + '</div>' +
