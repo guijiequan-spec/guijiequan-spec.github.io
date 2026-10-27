@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新闻情报中心 · 每日商业 / HR / 招聘 / 行业要闻</title>
+<meta name="description" content="每日商业情报、HR 前沿、招聘行业舆情、行业新闻与活动情报的自动归档看板，全部附原始来源。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">
+      <span class="dot"></span>
+      <div>
+        <h1>新闻情报中心</h1>
+        <p class="sub">商业 · HR · 招聘舆情 · 行业 · 活动 ｜ 每日自动更新</p>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-item"><label>最近更新</label><strong id="m-updated">—</strong></div>
+      <div class="meta-item"><label>累计篇目</label><strong id="m-total">—</strong></div>
+      <div class="meta-item"><label>另见</label><strong><a href="../layoffs/" class="lnk">裁员动态看板 →</a></strong></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap main">
+
+  <section class="sec-head">
+    <h2>今日速览</h2>
+    <span class="hint" id="hint">每个频道最新一期</span>
+  </section>
+  <section class="cards" id="cards"></section>
+
+  <section class="sec-head" style="margin-top:28px">
+    <h2>全部归档</h2>
+    <div class="tabs" id="tabs"></div>
+  </section>
+  <section class="panel">
+    <div class="filters">
+      <input id="q" type="search" placeholder="搜索标题或摘要关键词，如：AI、灵活用工、新能源">
+      <span class="fcount" id="fcount"></span>
+    </div>
+    <div id="archive" class="archive"></div>
+    <div id="empty" class="empty" hidden>没有匹配的条目，换个关键词试试。</div>
+  </section>
+</div>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <h3>关于</h3>
+      <p>本站汇聚 5 路定时任务产出：全球商业情报、HR 前沿情报、招聘行业舆情、行业新闻日报、活动情报周报。每条内容均保留原始来源链接。</p>
+    </div>
+    <div>
+      <h3>更新机制</h3>
+      <p>各任务按既定时间生成 Markdown / Word 原始稿，随后由发布脚本转换为静态页并推送至 GitHub Pages，通常 1–2 分钟内生效。</p>
+    </div>
+    <div>
+      <h3>免责声明</h3>
+      <p>内容为公开信息汇编，版权归原媒体所有。不构成投资、求职或法律建议；涉及具体决策请回溯原文核实。</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
