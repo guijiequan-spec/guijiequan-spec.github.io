@@ -69,7 +69,7 @@
     var html = [
       kpi('k1', '收录条目', items.length, '条', '当前筛选范围内'),
       kpi('k2', '覆盖月份', Object.keys(months).length, '个月', '2026 年 1 月 — 10 月'),
-      kpi('k3', '披露明确人数', withNum, '条',
+      kpi('k3', '有明确人数（筛选内）', withNum, '条',
         '共 ' + items.length + ' 条中，' + (items.length - withNum) + ' 条未披露人数'),
       kpi('k4', '数据待补 / 待核实', flagged, '条', '缺失字段或未获官方确认')
     ].join('');
@@ -126,8 +126,95 @@
     }).join('');
   }
 
-  function renderCoverage(cov) {
-    if (!cov) return;
+  // ---------- 人数分层汇总 ----------
+  function num(n) {
+    if (n == null) return '—';
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  function renderSummary(s) {
+    if (!s || !s.tiers) return;
+    var byKey = {};
+    s.tiers.forEach(function (t) { byKey[t.key] = t; });
+
+    var core = byKey['cn_core'] || {};
+    document.getElementById('sum-core').textContent = num(core.num);
+    document.getElementById('sum-core-count').textContent = core.count || 0;
+
+    var d = byKey['cn_direct'] || {};
+    document.getElementById('sum-direct').textContent = num(d.num) + ' 人';
+    document.getElementById('sum-direct-count').textContent = (d.count || 0) + ' 起';
+
+    var n12 = byKey['cn_net12'] || {};
+    document.getElementById('sum-net12').textContent = num(n12.num) + ' 人';
+    document.getElementById('sum-net12-count').textContent = (n12.count || 0) + ' 起';
+
+    var e = s.estimate || {};
+    document.getElementById('sum-est').textContent =
+      num(e.low) + ' – ' + num(e.high);
+
+    // 其余分层
+    var restKeys = ['cn_plan', 'cn_netmulti', 'global_core', 'industry_ref'];
+    document.getElementById('sum-tiers').innerHTML = restKeys.map(function (k) {
+      var t = byKey[k];
+      if (!t) return '';
+      return '<div class="tier t-' + (t.tone || 'sub') + '">' +
+        '<div class="tierhead">' +
+          '<span class="tlabel">' + esc(t.label.replace(/^　└\s*/, '')) + '</span>' +
+          '<span class="tnum">' + num(t.num) + ' 人</span>' +
+          '<span class="tcount">' + (t.count || 0) + ' 起</span>' +
+        '</div>' +
+        '<p class="tdesc">' + esc(t.desc) + '</p>' +
+      '</div>';
+    }).join('');
+
+    // Top 12 人数排行
+    var LAYER_TEXT = {
+      direct: ['单次裁员', 'l-direct'],
+      net12: ['近12月净减', 'l-net12'],
+      netmulti: ['跨多年净减', 'l-nmul'],
+      plan: ['计划值', 'l-plan'],
+      industry: ['行业汇总', 'l-ind'],
+      global: ['全球口径', 'l-glob']
+    };
+    var top = (s.top_cn || []).slice(0, 12);
+    var tmax = top.length ? top[0].num : 1;
+    document.getElementById('sum-top').innerHTML = top.map(function (t, idx) {
+      var L = LAYER_TEXT[t.layer] || ['—', ''];
+      // 用开方压缩长尾，否则 4 万以上的几条会把其余压成一条线
+      var w = Math.max(3, Math.round(Math.sqrt(t.num / tmax) * 100));
+      return '<div class="trow">' +
+        '<span class="trank">' + (idx + 1) + '</span>' +
+        '<span class="tco" title="' + esc(t.company) + '">' + esc(t.company) + '</span>' +
+        '<span class="tbar"><i class="' + L[1] + '" style="width:' + w + '%"></i></span>' +
+        '<span class="tval">' + num(t.num) + '</span>' +
+        '<span class="lb2 ' + L[1] + '">' + L[0] + '</span>' +
+        '<span class="tdate">' + esc(t.date.slice(5)) + '</span>' +
+      '</div>';
+    }).join('');
+
+    document.getElementById('sum-note').innerHTML =
+      '<b>口径说明：</b>' + esc(e.method || '');
+
+    var rows = (e.rows || []).filter(function (r) { return r.low != null; });
+    var skipped = (e.rows || []).length - rows.length;
+    document.getElementById('sum-detail-toggle').textContent =
+      '查看推算方法与明细（' + (e.miss_count || 0) + ' 条未披露人数，' + rows.length +
+      ' 条可推算，' + skipped + ' 条样本不足不估算）';
+    document.getElementById('sum-rows').innerHTML = rows.length
+      ? '<table class="rtab"><thead><tr><th>公司</th><th>行业</th>' +
+        '<th class="tr">估算区间</th><th>依据</th></tr></thead><tbody>' +
+        rows.map(function (r) {
+          return '<tr><td>' + esc(r.company) + '</td><td>' + esc(r.industry) + '</td>' +
+            '<td class="tr">' + num(r.low) + '–' + num(r.high) + '</td>' +
+            '<td class="basis">' + esc(r.reason) + '</td></tr>';
+        }).join('') + '</tbody></table>' +
+        (skipped ? '<p class="skipnote">另有 ' + skipped +
+          ' 条因同大类已披露样本不足 4 个而未估算，故上述区间为<b>下限性质</b>。</p>' : '')
+      : '<p class="empty">本批次无可用行业锚点，未做任何估算。</p>';
+  }
+
+  function renderCoverage(cov) {    if (!cov) return;
     var box = document.getElementById('coverage');
     if (!box) return;
     box.innerHTML =
@@ -238,6 +325,7 @@
 
     renderCoverage(data.coverage);
     renderInsights(data.insights);
+    renderSummary(window.__SUMMARY__);
     render();
     renderFeed();
 

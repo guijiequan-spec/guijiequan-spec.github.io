@@ -30,6 +30,7 @@ import argparse
 import io
 import json
 import os
+import sys
 from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -133,6 +134,14 @@ def main():
     save(data)
     print('条目：%d → %d（新增 %d，更新 %d）' % (before, len(data['items']), added, updated))
     print('更新时间：%s' % data['updated_at'])
+
+    # 入库后必须重算分层汇总，否则页面上的总数会和明细脱节
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import summary
+        summary.build()
+    except Exception as e:
+        print('[WARN] 汇总重算失败：%s' % e)
 
 
 if __name__ == '__main__':

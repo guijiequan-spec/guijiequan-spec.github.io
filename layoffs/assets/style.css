@@ -172,3 +172,100 @@ a:hover{text-decoration:underline}
   .covgrid{grid-template-columns:1fr}
   .fgrid{grid-template-columns:1fr}
 }
+
+/* ===== 已知裁员人数汇总 ===== */
+.sumhero{display:grid;grid-template-columns:300px 1fr;gap:0;border:1px solid var(--line);
+  border-radius:12px;overflow:hidden;background:#fff}
+.summain{background:linear-gradient(135deg,#8a3a2c 0%,#c0563f 100%);color:#fff;
+  padding:18px 20px;display:flex;flex-direction:column;justify-content:center}
+.smlabel{font-size:12.5px;color:rgba(255,255,255,.82);letter-spacing:.3px}
+.smnum{margin:2px 0 0;line-height:1.15}
+.smnum span{font-size:40px;font-weight:800;letter-spacing:-1.2px}
+.smnum em{font-size:14px;font-style:normal;font-weight:500;margin-left:4px;color:rgba(255,255,255,.8)}
+.smsub{font-size:12.5px;color:rgba(255,255,255,.78);margin-top:5px}
+.smsub b{color:#fff;font-weight:700}
+
+.sumsplit{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.ssitem{padding:16px 18px;border-left:1px solid var(--line);display:flex;
+  flex-direction:column;justify-content:center;min-width:0}
+.ssitem:first-child{border-left:0}
+.ssitem label{font-size:12px;color:var(--sub);line-height:1.4}
+.ssitem strong{font-size:19px;font-weight:750;letter-spacing:-.4px;margin-top:3px;white-space:nowrap}
+.ssitem span{font-size:11.5px;color:var(--sub);margin-top:2px}
+.ssitem.est{background:#fdfaf4}
+.ssitem.est strong{font-size:16px;color:#9a6210}
+
+/* 分层行 */
+.sumtiers{display:flex;flex-direction:column;gap:0;margin-top:12px;
+  border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tier{padding:11px 14px;border-top:1px dashed var(--line);background:#fff}
+.tier:first-child{border-top:0}
+.tier.t-warn{background:#fdf8ec}
+.tier.t-ref{background:#f7f8fa}
+.tierhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tlabel{font-size:13.2px;font-weight:650;color:var(--text)}
+.tnum{font-size:15px;font-weight:750;color:#a83524;margin-left:auto;letter-spacing:-.3px}
+.tier.t-warn .tnum{color:#9a6210}
+.tier.t-ref .tnum{color:#697386;font-size:13.5px}
+.tcount{font-size:11.5px;color:var(--sub);flex:none}
+.tdesc{margin:3px 0 0;font-size:12.3px;color:var(--sub);line-height:1.68}
+
+.sumnote{margin:11px 0 0;font-size:12.2px;color:#7a5a1a;background:#fdf8ec;
+  border-left:3px solid #e0b060;border-radius:0 8px 8px 0;padding:9px 12px;line-height:1.7}
+
+.sumdetail{margin-top:10px;border-top:1px dashed var(--line);padding-top:9px}
+.sumdetail summary{cursor:pointer;font-size:12.5px;color:var(--info);outline:none;list-style:none}
+.sumdetail summary::-webkit-details-marker{display:none}
+.sumdetail summary::before{content:"▸ ";color:var(--sub)}
+.sumdetail[open] summary::before{content:"▾ "}
+.sumrows{margin-top:9px;overflow-x:auto}
+.rtab{width:100%;border-collapse:collapse;font-size:12.3px}
+.rtab th{text-align:left;font-weight:600;color:var(--sub);font-size:11.8px;
+  padding:6px 9px;border-bottom:1px solid var(--line);white-space:nowrap}
+.rtab td{padding:6px 9px;border-bottom:1px solid #f2f4f7;vertical-align:top}
+.rtab tr:last-child td{border-bottom:0}
+.rtab .tr{text-align:right;font-variant-numeric:tabular-nums}
+.rtab .basis{color:var(--sub);font-size:11.8px}
+
+@media(max-width:900px){
+  .sumhero{grid-template-columns:1fr}
+  .sumsplit{grid-template-columns:1fr}
+  .ssitem{border-left:0;border-top:1px solid var(--line)}
+  .ssitem:first-child{border-top:0}
+}
+
+/* ===== 已知人数 Top 12 ===== */
+.toplist{display:flex;flex-direction:column;gap:0}
+.trow{display:flex;align-items:center;gap:10px;padding:5px 0;
+  border-bottom:1px solid #f3f5f8;font-size:12.6px}
+.trow:last-child{border-bottom:0}
+.trank{width:18px;flex:none;text-align:center;font-size:11px;color:var(--sub);
+  font-variant-numeric:tabular-nums}
+.tco{width:180px;flex:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  color:var(--text);font-weight:600}
+.tbar{flex:1;height:13px;background:#f1f3f7;border-radius:3px;overflow:hidden;min-width:60px}
+.tbar i{display:block;height:100%;border-radius:3px;background:var(--brand)}
+.tbar i.l-net12{background:var(--brand2)}
+.tbar i.l-nmul{background:#9a6210}
+.tbar i.l-plan{background:#5c7fa8}
+.tbar i.l-ind{background:#a8b0bd}
+.tbar i.l-glob{background:#8a5cd1}
+.tval{width:64px;flex:none;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;
+  letter-spacing:-.2px}
+.lb2{width:78px;flex:none;text-align:center;font-size:10.5px;border-radius:4px;
+  padding:1px 0;font-weight:600;line-height:1.5}
+.lb2.l-direct{background:#fdeeeb;color:#a83524}
+.lb2.l-net12{background:#fdf0e4;color:#b06020}
+.lb2.l-nmul{background:#fdf4e3;color:#8a5a10}
+.lb2.l-plan{background:#eef3fb;color:#2f5fa8}
+.lb2.l-ind{background:#f1f3f7;color:#697386}
+.lb2.l-glob{background:#f2edfb;color:#6a45b5}
+.tdate{width:44px;flex:none;text-align:right;font-size:11px;color:var(--sub)}
+
+@media(max-width:760px){
+  .tco{width:104px}
+  .lb2{display:none}
+  .tdate{width:38px}
+}
+.skipnote{margin:9px 0 0;font-size:11.8px;color:var(--sub);background:#f7f8fa;
+  border-radius:6px;padding:7px 10px}

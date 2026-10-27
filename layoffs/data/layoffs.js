@@ -1,5 +1,5 @@
 window.__LAYOFFS__ = {
- "updated_at": "2026-10-27 12:26",
+ "updated_at": "2026-10-27 13:08",
  "period_note": "2026 年 1 月 — 10 月 27 日 · 全年汇总（含 10 月每日增量）",
  "coverage": {
   "from": "2026-01-01",

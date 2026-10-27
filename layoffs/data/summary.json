@@ -1,0 +1,610 @@
+{
+  "generated_at": "2026-10-27 13:08",
+  "source_updated_at": "2026-10-27 13:08",
+  "basis": {
+    "period": "2026-01-01 至 2026-10-27",
+    "items_total": 105,
+    "items_with_num": 59,
+    "items_no_num": 46
+  },
+  "tiers": [
+    {
+      "key": "cn_core",
+      "tone": "main",
+      "label": "2026 年中国境内 · 可确认减员",
+      "num": 28968,
+      "count": 17,
+      "desc": "由「单次裁员公告」10,743 人（14 起）与「近 12 个月财报净减」18,225 人（3 起）相加。这是本年度中国境内唯一可被公开信息直接支撑的减员规模。"
+    },
+    {
+      "key": "cn_direct",
+      "tone": "sub",
+      "label": "　└ 其中：单次裁员公告",
+      "num": 10743,
+      "count": 14,
+      "desc": "公司公告 / 官方回应 / WARN 类申报直接披露的裁员人数。中国大陆 9 起、外企中国区 3 起、港澳台 2 起。"
+    },
+    {
+      "key": "cn_net12",
+      "tone": "sub",
+      "label": "　└ 其中：近 12 个月财报净减",
+      "num": 18225,
+      "count": 3,
+      "desc": "由财报/年报员工总数对比得出，含主动离职与自然流失，是「裁了多少」的上界。国内大厂普遍不发裁员公告，规模只体现在这里。"
+    },
+    {
+      "key": "cn_plan",
+      "tone": "sub",
+      "label": "另：目标值 / 上限值（尚在执行）",
+      "num": 1000,
+      "count": 1,
+      "desc": "公司公开的目标数或上限数，尚未执行完毕，与已发生人数分列。"
+    },
+    {
+      "key": "cn_netmulti",
+      "tone": "warn",
+      "label": "另：跨多年净减（2—5 年，不并入年度）",
+      "num": 71631,
+      "count": 4,
+      "desc": "隆基两年减 4.2 万（2023 末→2026.9）、万科五年减 1.25 万（2020→2025，不含 2026）、东方日升两年减 9,712、用友两年半减 7,451。时间跨度超出统计年度，只能作量级参照。"
+    },
+    {
+      "key": "global_core",
+      "tone": "sub",
+      "label": "全球口径 · 可确认减员",
+      "num": 68798,
+      "count": 39,
+      "desc": "把境外主体一并计入（境外单次裁员 39,830 人 / 22 起）。亚马逊 16,000 人因是全球口径（中国区未单列），未计入中国境内合计，但含在本行内。"
+    },
+    {
+      "key": "industry_ref",
+      "tone": "ref",
+      "label": "行业汇总口径（仅供参考，禁止相加）",
+      "num": 226035,
+      "count": 2,
+      "desc": "光伏 139 家两年多累计减 22.0 万、证券经纪人半年减 5,621 等统计口径。内部已包含隆基、东方日升等个别公司，与上面任何数字相加都会重复。"
+    }
+  ],
+  "layers": {
+    "direct_cn": [
+      "muth-wuxi-20261016",
+      "nokia-hz-20260831",
+      "qihang-xinweilai-20260831",
+      "xingyu-20260827",
+      "xuecheng-siyuan-20260816",
+      "hongguang-20260731",
+      "jiafeng-dg-20260714",
+      "hologic-cn-20260531",
+      "meituan-20260531",
+      "bridgestone-tw-20260511",
+      "astrazeneca-cn-20260303",
+      "benoy-hk-20260131",
+      "lg-yantai-20260131",
+      "xibei-20260115"
+    ],
+    "net12_cn": [
+      "li-auto-20261015",
+      "nio-20261009",
+      "xiaomi-20260331"
+    ],
+    "netmulti_cn": [
+      "longi-20260930",
+      "dongfang-risheng-20260930",
+      "vanke-20260831",
+      "yonyou-20260630"
+    ],
+    "plan_cn": [
+      "wangwang-20260831"
+    ],
+    "industry_cn": [
+      "pv-industry-20260930",
+      "broker-industry-20260603"
+    ],
+    "global_basis": [
+      "amazon-cn-20260126"
+    ],
+    "rumor_cn": [
+      "innolux-20261008"
+    ]
+  },
+  "top_cn": [
+    {
+      "company": "隆基绿能",
+      "date": "2026-09-30",
+      "num": 42000,
+      "region": "国内",
+      "layer": "netmulti"
+    },
+    {
+      "company": "万科",
+      "date": "2026-08-31",
+      "num": 12468,
+      "region": "国内",
+      "layer": "netmulti"
+    },
+    {
+      "company": "蔚来汽车",
+      "date": "2026-10-09",
+      "num": 10600,
+      "region": "国内",
+      "layer": "net12"
+    },
+    {
+      "company": "东方日升",
+      "date": "2026-09-30",
+      "num": 9712,
+      "region": "国内",
+      "layer": "netmulti"
+    },
+    {
+      "company": "用友网络",
+      "date": "2026-06-30",
+      "num": 7451,
+      "region": "国内",
+      "layer": "netmulti"
+    },
+    {
+      "company": "群创光电（Innolux）",
+      "date": "2026-10-08",
+      "num": 5800,
+      "region": "中国台湾",
+      "layer": "direct"
+    },
+    {
+      "company": "西贝餐饮",
+      "date": "2026-01-15",
+      "num": 4000,
+      "region": "国内",
+      "layer": "direct"
+    },
+    {
+      "company": "理想汽车",
+      "date": "2026-10-15",
+      "num": 3970,
+      "region": "国内",
+      "layer": "net12"
+    },
+    {
+      "company": "小米集团",
+      "date": "2026-03-31",
+      "num": 3655,
+      "region": "国内",
+      "layer": "net12"
+    },
+    {
+      "company": "美团",
+      "date": "2026-05-31",
+      "num": 2000,
+      "region": "国内",
+      "layer": "direct"
+    },
+    {
+      "company": "诺基亚（杭州研发中心）",
+      "date": "2026-08-31",
+      "num": 1600,
+      "region": "中国区",
+      "layer": "direct"
+    },
+    {
+      "company": "LG 电子（烟台模组厂）",
+      "date": "2026-01-31",
+      "num": 1429,
+      "region": "国内",
+      "layer": "direct"
+    }
+  ],
+  "top_global": [
+    {
+      "company": "大众汽车集团（Volkswagen AG）",
+      "date": "2026-06-26",
+      "num": 100000,
+      "region": "境外",
+      "layer": "plan"
+    },
+    {
+      "company": "采埃孚（ZF）",
+      "date": "2026-06-30",
+      "num": 14000,
+      "region": "境外",
+      "layer": "plan"
+    },
+    {
+      "company": "大众集团（Volkswagen AG）",
+      "date": "2026-10-25",
+      "num": 12000,
+      "region": "境外",
+      "layer": "plan"
+    },
+    {
+      "company": "保时捷（Porsche）",
+      "date": "2026-10-08",
+      "num": 9000,
+      "region": "境外",
+      "layer": "plan"
+    },
+    {
+      "company": "宝马（BMW）",
+      "date": "2026-10-22",
+      "num": 8000,
+      "region": "境外",
+      "layer": "plan"
+    }
+  ],
+  "estimate": {
+    "miss_count": 38,
+    "est_count": 21,
+    "base": 28968,
+    "low": 37191,
+    "mid": 45418,
+    "high": 53646,
+    "added_low": 8223,
+    "added_mid": 16450,
+    "added_high": 24678,
+    "method": "以「2026 年中国境内可确认减员 28,968 人」为底，对 38 条未披露人数的条目做推算，其中 21 条有足够行业样本（同大类已披露 ≥4 个）。区间取大类中位数的 0.4—1.2 倍：真正的大额裁员基本藏不住，未披露人数的多为中小规模事件，故不作对称分布假设。这是推算值，不是事实值；样本不足的条目一律不估，因此结果偏保守。",
+    "rows": [
+      {
+        "id": "autocar-unknown-20261023",
+        "company": "某车企（未具名）",
+        "industry": "汽车",
+        "group": "汽车",
+        "n": 4,
+        "low": 815,
+        "high": 2446,
+        "reason": "国内「汽车」4 个已披露样本，中位数 2,038 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "wujing-dongli-20261025",
+        "company": "南京无境未来动力科技（无境动力）",
+        "industry": "机器人 / 具身智能",
+        "group": "互联网科技",
+        "n": 8,
+        "low": 620,
+        "high": 1860,
+        "reason": "含境外「互联网科技」8 个已披露样本，中位数 1,550 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "ebay-cn-20261024",
+        "company": "eBay 中国区",
+        "industry": "互联网 / 电商",
+        "group": "互联网科技",
+        "n": 8,
+        "low": 620,
+        "high": 1860,
+        "reason": "含境外「互联网科技」8 个已披露样本，中位数 1,550 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "tencent-game-20260708",
+        "company": "腾讯（游戏国内发行线）",
+        "industry": "游戏",
+        "group": "互联网科技",
+        "n": 8,
+        "low": 620,
+        "high": 1860,
+        "reason": "含境外「互联网科技」8 个已披露样本，中位数 1,550 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "jd-retail-20260707",
+        "company": "京东零售",
+        "industry": "电商",
+        "group": "互联网科技",
+        "n": 8,
+        "low": 620,
+        "high": 1860,
+        "reason": "含境外「互联网科技」8 个已披露样本，中位数 1,550 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "jd-nexus-20260527",
+        "company": "京东集团（一线蓝领）",
+        "industry": "电商 / 物流",
+        "group": "互联网科技",
+        "n": 8,
+        "low": 620,
+        "high": 1860,
+        "reason": "含境外「互联网科技」8 个已披露样本，中位数 1,550 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "iflytek-20260331",
+        "company": "科大讯飞",
+        "industry": "人工智能",
+        "group": "互联网科技",
+        "n": 8,
+        "low": 620,
+        "high": 1860,
+        "reason": "含境外「互联网科技」8 个已披露样本，中位数 1,550 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "netease-ies-20260318",
+        "company": "网易互娱",
+        "industry": "游戏",
+        "group": "互联网科技",
+        "n": 8,
+        "low": 620,
+        "high": 1860,
+        "reason": "含境外「互联网科技」8 个已披露样本，中位数 1,550 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "zhongjin-fuzhao-20261026",
+        "company": "中金辐照（300962）",
+        "industry": "辐照加工 / 检测服务",
+        "group": "电子半导体",
+        "n": 6,
+        "low": 605,
+        "high": 1817,
+        "reason": "国内「电子半导体」6 个已披露样本，中位数 1,514 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "lg-huizhou-20261016",
+        "company": "乐金电子（惠州）· LG 电子",
+        "industry": "消费电子",
+        "group": "电子半导体",
+        "n": 6,
+        "low": 605,
+        "high": 1817,
+        "reason": "国内「电子半导体」6 个已披露样本，中位数 1,514 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "jd-chip-20260416",
+        "company": "京东（自研 AI 芯片团队）",
+        "industry": "半导体",
+        "group": "电子半导体",
+        "n": 6,
+        "low": 605,
+        "high": 1817,
+        "reason": "国内「电子半导体」6 个已披露样本，中位数 1,514 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "muxi-20260228",
+        "company": "沐曦股份（688802）",
+        "industry": "半导体",
+        "group": "电子半导体",
+        "n": 6,
+        "low": 605,
+        "high": 1817,
+        "reason": "国内「电子半导体」6 个已披露样本，中位数 1,514 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "bayerr-china-20261026",
+        "company": "拜耳中国（普药板块）",
+        "industry": "医药",
+        "group": "医药健康",
+        "n": 10,
+        "low": 72,
+        "high": 216,
+        "reason": "含境外「医药健康」10 个已披露样本，中位数 180 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "lilly-cn-20260701",
+        "company": "礼来中国",
+        "industry": "医药",
+        "group": "医药健康",
+        "n": 10,
+        "low": 72,
+        "high": 216,
+        "reason": "含境外「医药健康」10 个已披露样本，中位数 180 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "astrazeneca-cvrm-20260630",
+        "company": "阿斯利康中国（CVRM 线）",
+        "industry": "医药",
+        "group": "医药健康",
+        "n": 10,
+        "low": 72,
+        "high": 216,
+        "reason": "含境外「医药健康」10 个已披露样本，中位数 180 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "sanofi-dm-20260630",
+        "company": "赛诺菲（糖尿病事业部）",
+        "industry": "医药",
+        "group": "医药健康",
+        "n": 10,
+        "low": 72,
+        "high": 216,
+        "reason": "含境外「医药健康」10 个已披露样本，中位数 180 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "cosmo-cn-20260531",
+        "company": "科思莫斯（Cosmo）",
+        "industry": "医药",
+        "group": "医药健康",
+        "n": 10,
+        "low": 72,
+        "high": 216,
+        "reason": "含境外「医药健康」10 个已披露样本，中位数 180 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "revvity-cn-20260505",
+        "company": "瑞孚迪（Revvity）",
+        "industry": "医疗器械",
+        "group": "医药健康",
+        "n": 10,
+        "low": 72,
+        "high": 216,
+        "reason": "含境外「医药健康」10 个已披露样本，中位数 180 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "coloplast-cn-20260331",
+        "company": "康乐保（Coloplast）",
+        "industry": "医疗器械",
+        "group": "医药健康",
+        "n": 10,
+        "low": 72,
+        "high": 216,
+        "reason": "含境外「医药健康」10 个已披露样本，中位数 180 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "recordati-cn-20260131",
+        "company": "锐康迪（Recordati 中国）",
+        "industry": "医药",
+        "group": "医药健康",
+        "n": 10,
+        "low": 72,
+        "high": 216,
+        "reason": "含境外「医药健康」10 个已披露样本，中位数 180 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "nnovo-cn-20260101",
+        "company": "诺和诺德中国",
+        "industry": "医药",
+        "group": "医药健康",
+        "n": 10,
+        "low": 72,
+        "high": 216,
+        "reason": "含境外「医药健康」10 个已披露样本，中位数 180 人，取 0.4—1.2 倍"
+      },
+      {
+        "id": "laoganma-20261026",
+        "company": "贵阳南明老干妈风味食品有限责任公司（老干妈）",
+        "industry": "食品 / 调味品",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「消费零售」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "weijing-chuneng-20261026",
+        "company": "纬景储能（锌铁液流电池）",
+        "industry": "储能 / 新能源",
+        "n": 0,
+        "low": null,
+        "high": null,
+        "reason": "「新能源」已披露样本仅 0 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "gaoxin-lingshou-20261025",
+        "company": "高鑫零售（大润发）",
+        "industry": "零售 / 商超",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「消费零售」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "top5-realestate-20261022",
+        "company": "某 TOP5 地产央企（未具名）",
+        "industry": "房地产",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「地产建筑」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "zhongyuan-youtian-20261022",
+        "company": "中原油田（中国石化）",
+        "industry": "石油 / 能源",
+        "n": 0,
+        "low": null,
+        "high": null,
+        "reason": "「新能源」已披露样本仅 0 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "crec-20261020",
+        "company": "中国中铁 / 中国建筑等建筑央企",
+        "industry": "建筑 / 基建",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「地产建筑」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "cseoc-20261017",
+        "company": "中建系多家工程局",
+        "industry": "建筑 / 基建",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「地产建筑」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "huafa-20260930",
+        "company": "华发股份",
+        "industry": "房地产",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「地产建筑」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "lv-cn-20260831",
+        "company": "路易威登（LV / LVMH）",
+        "industry": "奢侈品零售",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「消费零售」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "liunaixi-jinan-20260228",
+        "company": "六乃喜（济南）",
+        "industry": "餐饮",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「消费零售」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "pv-henan-20260211",
+        "company": "河南某光伏企业（未具名）",
+        "industry": "光伏",
+        "n": 0,
+        "low": null,
+        "high": null,
+        "reason": "「新能源」已披露样本仅 0 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "chanlun-heung-hk-20260205",
+        "company": "陈联馨香庄",
+        "industry": "零售",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「消费零售」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "sams-restaurant-hk-20260201",
+        "company": "森美餐厅",
+        "industry": "餐饮",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「消费零售」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "cathay-20260131",
+        "company": "国泰航空",
+        "industry": "航空",
+        "n": 0,
+        "low": null,
+        "high": null,
+        "reason": "「交通运输」已披露样本仅 0 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "zhonghai-estate-20260131",
+        "company": "中海地产",
+        "industry": "房地产",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「地产建筑」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "cmschina-sec-20260107",
+        "company": "中邮证券",
+        "industry": "证券",
+        "n": 0,
+        "low": null,
+        "high": null,
+        "reason": "「金融」已披露样本仅 0 个（少于 4），样本不足，不估算"
+      },
+      {
+        "id": "sincere-hk-20260104",
+        "company": "先施百货（深水埗分店）",
+        "industry": "零售百货",
+        "n": 1,
+        "low": null,
+        "high": null,
+        "reason": "「消费零售」已披露样本仅 1 个（少于 4），样本不足，不估算"
+      }
+    ]
+  }
+}

@@ -29,6 +29,40 @@
 <div class="wrap main">
   <section class="kpis" id="kpis"></section>
 
+  <section class="panel sumpanel" id="summary">
+    <h2 class="p-title">已知裁员人数汇总 <span class="tag-soft">全库口径 · 不随下方筛选变化 · 跨层不可相加</span></h2>
+    <div class="sumhero">
+      <div class="summain">
+        <div class="smlabel">2026 年中国境内 · 可确认减员</div>
+        <div class="smnum"><span id="sum-core">—</span><em>人</em></div>
+        <div class="smsub"><b id="sum-core-count">—</b> 起有明确人数的公开事件</div>
+      </div>
+      <div class="sumsplit">
+        <div class="ssitem">
+          <label>其中 · 单次裁员公告</label>
+          <strong id="sum-direct">—</strong>
+          <span id="sum-direct-count">—</span>
+        </div>
+        <div class="ssitem">
+          <label>其中 · 近 12 个月财报净减</label>
+          <strong id="sum-net12">—</strong>
+          <span id="sum-net12-count">—</span>
+        </div>
+        <div class="ssitem est">
+          <label>叠加未披露条目后的推算区间</label>
+          <strong id="sum-est">—</strong>
+          <span>推算值 · 下限性质，非事实值</span>
+        </div>
+      </div>
+    </div>
+    <div class="sumtiers" id="sum-tiers"></div>
+    <p class="sumnote" id="sum-note"></p>
+    <details class="sumdetail">
+      <summary id="sum-detail-toggle">查看推算方法与明细</summary>
+      <div id="sum-rows" class="sumrows"></div>
+    </details>
+  </section>
+
   <section class="panel cover" id="coverage"></section>
 
   <section class="panel filters">
@@ -63,6 +97,11 @@
       <label class="chip"><input id="only-counted" type="checkbox">仅看有人数</label>
       <span class="fcount" id="fcount"></span>
     </div>
+  </section>
+
+  <section class="panel">
+    <h2 class="p-title">中国境内 · 已知人数 Top 12 <span class="tag-soft">标签 = 该数字所属口径，不同口径不可相加</span></h2>
+    <div id="sum-top" class="toplist"></div>
   </section>
 
   <section class="grid-2">
@@ -107,7 +146,7 @@
     </div>
     <div class="fcol">
       <h3>缺失标注规则</h3>
-      <p>人数、占比、部门、地区、原因任一未从公开信源获得，即在该条目标注「数据缺失 / 待确认」，并保留空值；<b>不做任何估算或补全</b>。仅有月份无具体日期者，按当月归档并在口径提醒中说明。</p>
+      <p>人数、占比、部门、地区、原因任一未从公开信源获得，即在该条目标注「数据缺失 / 待确认」，并保留空值，<b>条目本身不做任何估算或补全</b>。仅有月份无具体日期者，按当月归档并在口径提醒中说明。汇总层给出的推算区间单独标注来源与方法，不写回任何条目。</p>
     </div>
     <div class="fcol">
       <h3>免责声明</h3>
@@ -117,6 +156,7 @@
 </footer>
 
 <script src="data/layoffs.js"></script>
+<script src="data/summary.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
