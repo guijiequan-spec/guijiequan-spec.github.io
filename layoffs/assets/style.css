@@ -65,7 +65,7 @@ a:hover{text-decoration:underline}
 /* charts */
 .chart{width:100%;overflow-x:auto}
 .bar-row{display:flex;align-items:center;gap:10px;margin-bottom:7px}
-.bar-row .lb{width:74px;font-size:12px;color:var(--sub);text-align:right;flex:none}
+.bar-row .lb{width:86px;font-size:12px;color:var(--sub);text-align:right;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bar-row .track{flex:1;height:16px;background:#f1f3f7;border-radius:5px;overflow:hidden}
 .bar-row .fill{height:100%;background:linear-gradient(90deg,var(--brand),var(--brand2));border-radius:5px}
 .bar-row .vl{width:44px;font-size:12px;color:var(--sub);flex:none}
