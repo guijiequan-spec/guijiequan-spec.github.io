@@ -33,7 +33,12 @@ API = "https://api.github.com"
 
 # 不推送的本地垃圾
 SKIP_DIRS = {".git", "__pycache__", "node_modules", ".workbuddy", ".idea", ".vscode"}
-SKIP_NAMES = {".DS_Store", "Thumbs.db", ".github_token"}
+SKIP_NAMES = {
+    ".DS_Store", "Thumbs.db", ".github_token",
+    "new_items.json",              # 每日增量暂存，合并入库后即无用
+    "push-to-github.bat",          # 本地一键脚本，不必上网
+    "github_token.txt",
+}
 SKIP_SUFFIX = {".pyc", ".pyo", ".log"}
 
 
