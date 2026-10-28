@@ -50,6 +50,8 @@ LAYER = {
     "gsk-rd-20260202": "plan",
     "wangwang-20260831": "plan",
     "ebay-global-20261022": "plan",
+    # 计划值：年内累计目标，含上半年已削减的约 1000 岗，非单次公告
+    "barclays-20261022": "plan",
     # 区域标中国区、实为全球口径
     "amazon-cn-20260126": "global",
 }

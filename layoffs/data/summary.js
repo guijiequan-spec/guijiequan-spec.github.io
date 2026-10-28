@@ -1,11 +1,11 @@
 window.__SUMMARY__ = {
- "generated_at": "2026-10-27 13:08",
- "source_updated_at": "2026-10-27 13:08",
+ "generated_at": "2026-10-28 09:20",
+ "source_updated_at": "2026-10-28 09:20",
  "basis": {
   "period": "2026-01-01 至 2026-10-27",
-  "items_total": 105,
-  "items_with_num": 59,
-  "items_no_num": 46
+  "items_total": 110,
+  "items_with_num": 60,
+  "items_no_num": 50
  },
  "tiers": [
   {
@@ -231,17 +231,27 @@ window.__SUMMARY__ = {
   }
  ],
  "estimate": {
-  "miss_count": 38,
-  "est_count": 21,
+  "miss_count": 41,
+  "est_count": 22,
   "base": 28968,
-  "low": 37191,
-  "mid": 45418,
-  "high": 53646,
-  "added_low": 8223,
-  "added_mid": 16450,
-  "added_high": 24678,
-  "method": "以「2026 年中国境内可确认减员 28,968 人」为底，对 38 条未披露人数的条目做推算，其中 21 条有足够行业样本（同大类已披露 ≥4 个）。区间取大类中位数的 0.4—1.2 倍：真正的大额裁员基本藏不住，未披露人数的多为中小规模事件，故不作对称分布假设。这是推算值，不是事实值；样本不足的条目一律不估，因此结果偏保守。",
+  "low": 38006,
+  "mid": 47048,
+  "high": 56092,
+  "added_low": 9038,
+  "added_mid": 18080,
+  "added_high": 27124,
+  "method": "以「2026 年中国境内可确认减员 28,968 人」为底，对 41 条未披露人数的条目做推算，其中 22 条有足够行业样本（同大类已披露 ≥4 个）。区间取大类中位数的 0.4—1.2 倍：真正的大额裁员基本藏不住，未披露人数的多为中小规模事件，故不作对称分布假设。这是推算值，不是事实值；样本不足的条目一律不估，因此结果偏保守。",
   "rows": [
+   {
+    "id": "audi-faw-nev-20261027",
+    "company": "奥迪一汽新能源汽车有限公司（长春 PPE 工厂）",
+    "industry": "汽车",
+    "group": "汽车",
+    "n": 4,
+    "low": 815,
+    "high": 2446,
+    "reason": "国内「汽车」4 个已披露样本，中位数 2,038 人，取 0.4—1.2 倍"
+   },
    {
     "id": "autocar-unknown-20261023",
     "company": "某车企（未具名）",
@@ -471,6 +481,15 @@ window.__SUMMARY__ = {
     "reason": "「新能源」已披露样本仅 0 个（少于 4），样本不足，不估算"
    },
    {
+    "id": "xincheng-holding-20261026",
+    "company": "新城控股（601155.SH）",
+    "industry": "房地产",
+    "n": 1,
+    "low": null,
+    "high": null,
+    "reason": "「地产建筑」已披露样本仅 1 个（少于 4），样本不足，不估算"
+   },
+   {
     "id": "gaoxin-lingshou-20261025",
     "company": "高鑫零售（大润发）",
     "industry": "零售 / 商超",
@@ -505,6 +524,15 @@ window.__SUMMARY__ = {
     "low": null,
     "high": null,
     "reason": "「地产建筑」已披露样本仅 1 个（少于 4），样本不足，不估算"
+   },
+   {
+    "id": "dasheng-newenergy-20261019",
+    "company": "浙江大晟新能源科技有限公司（乐通股份 002319 参股）",
+    "industry": "光伏",
+    "n": 0,
+    "low": null,
+    "high": null,
+    "reason": "「新能源」已披露样本仅 0 个（少于 4），样本不足，不估算"
    },
    {
     "id": "cseoc-20261017",
