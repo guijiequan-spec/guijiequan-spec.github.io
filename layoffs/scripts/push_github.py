@@ -298,7 +298,7 @@ def main():
     print("[6/6] 已推送到 %s@%s" % (branch, commit["sha"][:10]))
 
     # 7. 回读远端，确认内容与本地一致（不只看退出码）
-    ok = verify_remote(repo, branch, target, local_dir)
+    ok = verify_remote(repo, branch, target, args.dir)
     if not ok:
         print("[WARN] 远端校验未通过，请手动复核："
               "https://github.com/%s/tree/%s/%s" % (repo, branch, target))
