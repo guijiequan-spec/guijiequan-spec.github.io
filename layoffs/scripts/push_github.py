@@ -25,11 +25,17 @@ import base64
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
 
 API = "https://api.github.com"
+
+# 沙箱出网对 api.github.com 会间歇性 SSL EOF，靠重试兜住
+MAX_ATTEMPTS = 4
+BACKOFF_SECONDS = [3, 8, 20]          # 第 1/2/3 次重试前的等待
+RETRYABLE_STATUS = {429, 500, 502, 503, 504}
 
 # 不推送的本地垃圾
 SKIP_DIRS = {".git", "__pycache__", "node_modules", ".workbuddy", ".idea", ".vscode"}
@@ -78,19 +84,33 @@ def api(method, path, token, payload=None, accept="application/vnd.github+json")
     req.add_header("User-Agent", "layoffs-dashboard-sync")
     if data:
         req.add_header("Content-Type", "application/json")
-    try:
-        with urllib.request.urlopen(req, timeout=40) as r:
-            body = r.read().decode("utf-8")
-            return r.status, (json.loads(body) if body else None)
-    except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", "ignore")
+
+    last_status, last_payload = 0, {"message": "未知错误"}
+    for attempt in range(MAX_ATTEMPTS):
         try:
-            j = json.loads(body)
-        except Exception:
-            j = {"message": body[:400]}
-        return e.code, j
-    except urllib.error.URLError as e:
-        return 0, {"message": "网络不可达: %s" % e.reason}
+            with urllib.request.urlopen(req, timeout=40) as r:
+                body = r.read().decode("utf-8")
+                return r.status, (json.loads(body) if body else None)
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", "ignore")
+            try:
+                j = json.loads(body)
+            except Exception:
+                j = {"message": body[:400]}
+            last_status, last_payload = e.code, j
+            # 401/403/404/422 是凭证或请求本身的问题，重试无用
+            if e.code not in RETRYABLE_STATUS:
+                return e.code, j
+        except urllib.error.URLError as e:
+            last_status, last_payload = 0, {"message": "网络不可达: %s" % e.reason}
+
+        if attempt < MAX_ATTEMPTS - 1:
+            wait = BACKOFF_SECONDS[attempt]
+            print("      [retry] 第 %d 次失败（%s），%d 秒后重试…"
+                  % (attempt + 1, (last_payload or {}).get("message"), wait))
+            time.sleep(wait)
+
+    return last_status, last_payload
 
 
 def collect(local_dir):
@@ -108,6 +128,43 @@ def collect(local_dir):
             continue
         out["/".join(rel.parts)] = p.read_bytes()
     return out
+
+
+def verify_remote(repo, branch, target, local_dir):
+    """回读远端核心数据文件，与本地比对条目数与 updated_at。"""
+    checks = [("data/layoffs.json", "items"), ("data/summary.json", None)]
+    # 两个文件记录时间的键名不同，都试一遍
+    TIME_KEYS = ("updated_at", "generated_at", "source_updated_at")
+    token = find_token()
+    all_ok = True
+    for rel, key in checks:
+        path = "/repos/%s/contents/%s/%s" % (repo, target, rel) if target \
+            else "/repos/%s/contents/%s" % (repo, rel)
+        st, f = api("GET", path + "?ref=" + branch, token)
+        if st != 200 or not f or "content" not in f:
+            print("      [skip] 远端 %s 读取失败 (%s)" % (rel, st))
+            continue
+        try:
+            remote = json.loads(base64.b64decode("".join(f["content"].split())).decode("utf-8"))
+        except Exception as e:
+            print("      [skip] 远端 %s 解析失败: %s" % (rel, e))
+            continue
+        local = json.loads((Path(local_dir) / rel).read_text(encoding="utf-8"))
+        if key:
+            rn, ln = len(remote.get(key, [])), len(local.get(key, []))
+            same = rn == ln
+            print("      [%s] %s 条目数 远端=%d 本地=%d"
+                  % ("OK  " if same else "FAIL", rel, rn, ln))
+            all_ok = all_ok and same
+        for tk in TIME_KEYS:
+            if tk in remote:
+                ru, lu = remote.get(tk), local.get(tk)
+                same = ru == lu
+                print("      [%s] %s %s 远端=%s 本地=%s"
+                      % ("OK  " if same else "FAIL", rel, tk, ru, lu))
+                all_ok = all_ok and same
+                break
+    return all_ok
 
 
 def main():
@@ -239,10 +296,16 @@ def main():
         print("[FAIL] 更新分支失败 (%s): %s" % (st, (upd or {}).get("message")))
         return 9
     print("[6/6] 已推送到 %s@%s" % (branch, commit["sha"][:10]))
+
+    # 7. 回读远端，确认内容与本地一致（不只看退出码）
+    ok = verify_remote(repo, branch, target, local_dir)
+    if not ok:
+        print("[WARN] 远端校验未通过，请手动复核："
+              "https://github.com/%s/tree/%s/%s" % (repo, branch, target))
     print("")
     print("完成。若该仓库已开启 Pages，1–2 分钟后可访问：")
     print("  https://%s.github.io/%s/" % (repo.split("/")[0].lower(), target))
-    return 0
+    return 0 if ok else 10
 
 
 if __name__ == "__main__":

@@ -30,7 +30,21 @@ config/sources.json     RSS 源与关键词配置
 python scripts/update.py --input new_items.json
 ```
 
-3. 重新发布（WorkBuddy 托管站）或 `git push`（GitHub Pages，1–2 分钟生效）
+3. 重新发布（WorkBuddy 托管站）
+4. **推送 GitHub Pages 镜像（必做，与第 3 步同等重要）**：
+
+```bash
+python scripts/push_github.py --message "chore: 每日更新 YYYY-MM-DD"
+```
+
+脚本会自动重试网络抖动（最多 4 次尝试，退避 3/8/20 秒），并在推送完成后回读远端
+`data/layoffs.json` 与 `data/summary.json`，与本地比对条目数与时间戳，逐行打印 `[OK]`/`[FAIL]`。
+**校验行出现 `[FAIL]` 即视为未同步，必须按提示排障后重跑，不得静默略过。**
+
+- GitHub Pages 约 1–2 分钟生效
+- 凭证：`.workbuddy/github_token.txt`（fine-grained PAT，需 Contents: Read and write + Metadata: Read）
+- 目标仓库：`guijiequan-spec/guijiequan-spec.github.io`，分支 `main`，子目录 `layoffs/`
+- 沙箱内 `raw.githubusercontent.com` 基本不可达，校验远端请用 `contents` API 取 base64 解码
 
 ## 字段规范
 
